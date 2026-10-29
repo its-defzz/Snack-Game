@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Snake Game - Happy Edition</title>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="stars" id="stars"></div>
+<div class="container">
+  <h1><span>🐍</span> <span>SNAKE</span> <span>🎉</span></h1>
+  <div class="subtitle">Makan buah, jangan nabrak!</div>
+  <div class="stats">
+    <div class="stat-box"><div class="stat-label">Skor</div><div class="stat-value" id="score">0</div></div>
+    <div class="stat-box"><div class="stat-label">High Score</div><div class="stat-value" id="high">0</div></div>
+    <div class="stat-box"><div class="stat-label">Level</div><div class="stat-value" id="level">1</div></div>
+  </div>
+  <div id="gameWrap">
+    <canvas id="game" width="400" height="400"></canvas>
+    <div id="overlay">
+      <h2 id="ovTitle">Siap Main?</h2>
+      <p id="ovMsg">Pake WASD / Arrow / tombol di bawah</p>
+      <button onclick="startGame()">MULAI 🚀</button>
+    </div>
+  </div>
+  <div class="controls">
+    <button id="startBtn" onclick="startGame()">Restart ▶</button>
+    <button id="musicBtn" onclick="toggleMusic()">🎵 Musik ON</button>
+  </div>
+  <div class="dpad">
+    <div class="empty"></div><button onclick="setDir(0,-1)">⬆️</button><div class="empty"></div>
+    <button onclick="setDir(-1,0)">⬅️</button><button onclick="setDir(0,1)">⬇️</button><button onclick="setDir(1,0)">➡️</button>
+  </div>
+</div>
+<script src="js/script.js"></script>
+</body>
+</html>
